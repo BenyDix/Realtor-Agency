@@ -310,8 +310,10 @@ def delete_apartments(apartments):
             if 1 <= choice <= len(apartments):
                 while True:
                     selected = apartments[choice - 1]
-                    confirm = input(f"Вы уверены, что хотите удалить запись?\n"
-                                    f"{selected}\n(да/нет): ").lower()
+                    confirm = input(f"Вы уверены, что хотите удалить запись?(да/нет)\n"
+                                    f"Адрес: {selected['адрес']} | "
+                                    f"Комнат: {selected['комнат']} | "
+                                    f"Цена: {selected['стоимость']:,} руб.\n").lower()
 
                     if confirm in ['да', 'д', 'yes', 'y']:
                         apartments.pop(choice - 1)
