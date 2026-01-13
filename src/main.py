@@ -451,5 +451,4 @@ def main_menu():
 
 
 if __name__ == "__main__":
-    apartments_list = load_apartments()
     main_menu()
